@@ -1,0 +1,72 @@
+@import url(reset.css);
+
+:root {
+    --bgcolor_all: #2d3436;
+    --color-text-header: #fff;
+    --bgcolor_grid: #fafafa;
+}
+
+header h1 {
+    line-height: 6.0rem;
+    text-align: center;
+    color: var(--color-text-header);
+    background-color: var(--bgcolor_all);
+    margin-bottom: 5rem;
+    padding: 1rem 0;
+}
+
+/* gallery primary */
+ul.primary-grid {
+    display: grid;
+    max-width: 100rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    /* espcement entre les gilles */
+    gap: 1rem;
+    background-color: var(--bgcolor_grid);
+    padding: 1rem;
+    box-shadow: 0 0 2rem var(--bgcolor_all);
+}
+
+ul li {
+    border-color: var(--bgcolor_all);
+    border-style: solid;
+}
+
+ul.primary-grid li figure img {
+    width: 100%;
+    height: 30rem;
+}
+
+form {
+    max-width: 80rem;
+}
+
+footer {
+    text-align: center;
+    line-height: 6rem;
+}
+
+
+/* media queris */
+@media screen and (max-width: 80rem) {
+    ul.primary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+}
+
+@media screen and (orentation: landscape) {
+    ul.primary-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header h1 {
+        font-size: xx-large;
+        margin: 5rem;
+    }
+}
